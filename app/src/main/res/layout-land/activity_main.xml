@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="helpButton"
+        android:text="Help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Reset"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Reset"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:gravity="center|center_vertical"
+            android:text="GUESS THE IMAGE"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgView_Celebrity"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/whoIsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="WHO IS THE CELEBRITY?"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btn_Option3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="pickAnswer"
+        android:text="Button"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_Option2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option2" />
+
+    <Button
+        android:id="@+id/btn_Option2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="pickAnswer"
+        android:text="Button"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_Option1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option1" />
+
+    <Button
+        android:id="@+id/btn_Option4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="pickAnswer"
+        android:text="Button"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_Option3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Option3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_Option1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="196dp"
+        android:onClick="pickAnswer"
+        android:text="Button"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whoIsTextView" />
+
+    <Button
+        android:id="@+id/btn_Previous"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="70dp"
+        android:onClick="previousQuestion"
+        android:text="Previous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btn_Reset"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="resetGame"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Next"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Next" />
+
+    <Button
+        android:id="@+id/btn_Next"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autoText="false"
+        android:onClick="nextQuestion"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Previous"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Previous" />
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="0"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Score"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Option4"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgView_Celebrity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
