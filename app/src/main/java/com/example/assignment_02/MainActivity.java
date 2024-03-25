@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     Question[] questions = new Question[5]; // Index range is 0-4
 
-    Button op1, op2, op3, op4, prev, next;
+    Button op1, op2, op3, op4, prev, next, nextLevel;
     ImageView imgViewCelebrity;
     TextView scoreCount;
     int score = 0, questionIndex = 0;
