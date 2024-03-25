@@ -7,6 +7,8 @@ public class Question {
     public String option3;
     public String option4;
     public String correctAnswer;
+
+    public String wrongAnswer;
     public int imageResourceId; // Add image resource ID
     int score = 0;
     boolean answered = false;
